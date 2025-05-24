@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Styling Section -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="shortcut icon" href="https://img.icons8.com/arcade/64/spider.png" type="image/x-icon">
+    <title>Excel Analyzer</title>
+</head>
+<body>
+
+    <!-- Excel Analyzer Input Section -->
+    <div class="analyzer_input_container">
+        
+        <div class="analyzer_container">
+            <h2 class="title"><img width="30" height="30" src="https://img.icons8.com/wired/64/ms-excel.png" alt="ms-excel"/> Excel Analyzer</h2>
+            <div class="analyzer_components">
+                <form action="POST" class="excel_upload_form">
+                    <label for="excel_file">Upload an Excel file:</label>
+                    <input type="file" name="excel_file" class="excel_file" id="excel_file" required>
+                    <label for="excel_file">Input sheet names, separated by comma:</label>
+                    <input type="text" name="sheet_names" class="sheet_names" id="sheet_names" placeholder="e.g. sheet 1 name, sheet 2 name" required>
+                    <input type="submit" class="excel_submit button" value="START">
+                </form>
+                <div class="status_message">Upload file above and click START when ready.</div>
+                <div class="result_container" >
+                    <a href="#" class="result_link" download>
+                        <button>DOWNLOAD RESULT FILE</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Functionality Section -->
+    <script defer type="module" src="../static/excel_analyzer.js"></script>
+</body>
+</html>
